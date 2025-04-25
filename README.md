@@ -1,9 +1,9 @@
- 🤖 Custom Gemini AI Chatbot
+ 🤖 Custom Gemini AI Chatbot 
 
 A responsive web-based chatbot interface powered by **Google Gemini 2.0 Flash API**, built with modern web technologies. This project demonstrates the integration of AI into a front-end application, allowing real-time conversations in a clean, interactive interface.
 
 ---
-
+Check the project here: https://lnkd.in/djp-CWcf
 ## 🚀 Features
 
 - ✅ Real-time AI responses using **Gemini API**  
