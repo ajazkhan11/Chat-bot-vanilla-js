@@ -1,8 +1,4 @@
-Perfect! Here's the final **professional `README.md`** file with your updated email **`ajazk5574@gmail.com`** and GitHub username **`ajazk5574`**:
-
----
-
-# 🤖 Custom Gemini AI Chatbot
+ 🤖 Custom Gemini AI Chatbot
 
 A responsive web-based chatbot interface powered by **Google Gemini 2.0 Flash API**, built with modern web technologies. This project demonstrates the integration of AI into a front-end application, allowing real-time conversations in a clean, interactive interface.
 
