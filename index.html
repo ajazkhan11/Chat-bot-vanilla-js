@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Custom Bot</title>
+
+  <!--  Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+  <!--  Google Fonts for Modern Look -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+
+<style>
+  /* Base styles */
+  body {
+      font-family: 'Inter', sans-serif;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      animation: backgroundSlide 64s infinite ease-in-out;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin: 0;
+    }
+
+    @keyframes backgroundSlide {
+  0% {
+    background-image: url('https://img.freepik.com/free-photo/3d-delivery-robot-working_23-2151150182.jpg?semt=ais_hybrid&w=740');
+  }
+  6.25% {
+    background-image: url('https://img.freepik.com/premium-photo/3d-rendering-artificial-intelligence-cyborg-robot-think-neon-light_493806-7651.jpg?semt=ais_hybrid&w=740');
+  }
+  12.5% {
+    background-image: url('https://img.freepik.com/free-vector/artificial-intelligence-ai-robot-server-room-digital-technology-banner-computer-equipment_39422-768.jpg?semt=ais_hybrid&w=740');
+  }
+  25% {
+    background-image: url('https://img.freepik.com/premium-vector/modern-illustration-with-bot-megaphone-marketing-design-digital-marketing-concept_194782-1465.jpg?semt=ais_hybrid&w=740');
+  }
+  37.5% {
+    background-image: url('https://img.freepik.com/premium-vector/modern-robot-student-holding-books-online-education-machine-learning-knowledge-artificial-intelligence_48369-37439.jpg?semt=ais_hybrid&w=740');
+  }
+  50% {
+    background-image: url('https://img.freepik.com/premium-photo/3d-rendering-ai-robot-think-compute_493806-4230.jpg?ga=GA1.1.102653006.1744490255&semt=ais_hybrid&w=740');
+  }
+  62.5% {
+    background-image: url('https://img.freepik.com/free-photo/robot-handshake-human-background-futuristic-digital-age_53876-129770.jpg?ga=GA1.1.102653006.1744490255&semt=ais_hybrid&w=740');
+  }
+  75% {
+    background-image: url('https://img.freepik.com/free-photo/ai-chip-artificial-intelligence-future-technology-innovation_53876-129780.jpg?ga=GA1.1.102653006.1744490255&semt=ais_hybrid&w=740');
+  }
+  87.5% {
+    background-image: url('https://img.freepik.com/free-photo/top-view-unrecognizable-hacker-performing-cyberattack-night_1098-18706.jpg?ga=GA1.1.102653006.1744490255&semt=ais_hybrid&w=740');
+  }
+  100% {
+    background-image: url('https://img.freepik.com/free-photo/3d-delivery-robot-working_23-2151150182.jpg?semt=ais_hybrid&w=740');
+  }
+}
+
+
+  /*  Main wrapper */
+  .chat-wrapper {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+
+  .chat-wrapper:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+  }
+
+  h1 {
+    background-color: #56c271;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+    transition: background-color 0.3s ease;
+  }
+
+  h1:hover {
+    background-color: #45a75e; /* Darker green on hover */
+  }
+
+  #repose {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #f1f5f9;
+    margin-bottom: 20px;
+    resize: none;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  #repose:hover {
+    background-color: #e8f1fc; /* Light blue on hover */
+  }
+
+  #user_input {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+
+  #user_input:focus {
+    border-color: #56c271;
+    outline: none;
+  }
+
+  #submit_button {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #56c271;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s;
+  }
+
+  #submit_button:hover {
+    background-color: #45a75e;
+    transform: translateY(-2px); /* subtle lift on hover */
+  }
+
+  #submit_button:active {
+    transform: scale(0.98);
+  }
+
+  @media (max-width: 576px) {
+    h1 {
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+
+    #repose {
+      height: 250px;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <!--  Chat Container -->
+  <div class="chat-wrapper">
+    <h1>Welcome To Our Free Bot</h1>
+
+    <!--  Chat Output -->
+    <textarea id="repose" readonly placeholder="Chat will appear here..."></textarea>
+
+    <!--  Input field -->
+    <input type="text" id="user_input" placeholder="Write your query here..." />
+
+    <!--  Submit button -->
+    <button type="submit" id="submit_button" class="btn btn-primary">Submit</button>
+  </div>
+
+  <!--  Script file (connect your JS) -->
+  <script src="custom_bot_gemini_api.js"></script>
+
+</body>
+</html>
