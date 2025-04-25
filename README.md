@@ -57,14 +57,15 @@ A responsive web-based chatbot interface powered by **Google Gemini 2.0 Flash AP
 
 ## 📸 Preview
 
-*(Add a screenshot or animated GIF here to show the chatbot in action)*
+![image](https://github.com/user-attachments/assets/4223c228-ddeb-4543-8800-3dc7b644d015)
+
 
 ---
 
 ## 🙋 Author
 
 **Muhammad Ijaz**  
-💼 Frontend Developer | AI Integrator  
+💼 Software Developer
 📧 Email: [ajazk5574@gmail.com](mailto:ajazk5574@gmail.com)  
 
 ---
